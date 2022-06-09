@@ -1,3 +1,31 @@
+var custtype = "direct";
+
+function changetype908() {
+    if (custtype == "direct") {
+        custtype = "advertising";
+    } else if (custtype == "advertising") {
+        custtype = "subscription";
+    } else if (custtype == "subscription") {
+        custtype = "direct";
+    }
+
+    window.alert("Customer type has changed to " + custtype);
+}
+
+function displaytype702() {
+    var msg1 = "Buy Now! From this web page! My children need new shoes!";
+    var msg2 = "Support our advertisers! Click on an ad, so I can make money!";
+    var msg3 = "Renew your subscription today! My children need medicine!";
+
+    if (custtype == "direct") {
+        alert(msg1);
+    } else if (custtype == "advertising") {
+        alert(msg2);
+    } else if (custtype == "subscription") {
+        alert(msg3);
+    }
+}
+
 // declare this variable outside of your functions
 special = 1;     // selects which item that is "on special"
 
