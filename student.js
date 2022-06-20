@@ -1,3 +1,33 @@
+function getAge277() {
+    var age = window.prompt("Enter your age")
+    var message = "Your Age Is: " + age;
+
+    if (age < 18) {
+        message += " You are a kid";
+    } else if (age < 50) {
+        message += " You are an adult";
+    } else if (age > 50) {
+        message += " You are a senior citizen";
+    }
+
+    document.getElementById("age277").textContent = message;
+}
+
+function getName404() {
+    var name = window.prompt("Enter your name:");
+    var message = "Your Name Is: " + name;
+
+    if (name.length < 5) {
+        message += " You have a short name";
+    } else if (name.length < 10) {
+        message += " You have a medium name";
+    } else if (name.length > 10) {
+        message += " You have a long name";
+    }
+
+    document.getElementById("name404").textContent = message;
+}
+
 var custtype = "direct";
 
 function changetype908() {
