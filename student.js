@@ -1,3 +1,36 @@
+function getBreaks542() {
+    var number = -1;
+    do {
+        number = parseInt(window.prompt("Enter a number from 1 to 5"));
+    } while (number < 1 || number > 5);
+
+    var breaks = "";
+
+    for (var i = 0; i < number; i++) {
+        breaks += "<br>";
+    }
+
+    document.getElementById("breaks542").innerHTML = breaks;
+}
+
+function getCards914() {
+    var number = -1;
+    do {
+        number = parseInt(window.prompt("Enter a number from 2 to 7"));
+    } while (number < 2 || number > 7);
+
+    var cardsMessage = "";
+
+    for (var i = 0; i < number; i++) {
+        cardsMessage += "Card #" + i + " ";
+    }
+
+
+    cardsMessage = cardsMessage.trim()
+
+    document.getElementById("cards914").innerHTML = cardsMessage;
+}
+
 function getAge277() {
     var age = window.prompt("Enter your age")
     var message = "Your Age Is: " + age;
