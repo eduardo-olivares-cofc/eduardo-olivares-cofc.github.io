@@ -2,7 +2,7 @@ var companyname5 = "Drip Clothes Inc.";
 var address3 = "450 Main St. Valencia, CA 91344";
 var phonenumber5 = "(555) 515-1234";
 
-function getHeader(){
+function getHeader() {
     return '<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">\
     <div class="container">\
         <a class="navbar-brand" href="#page-top">' + companyname5 + '</a> \
@@ -21,10 +21,10 @@ function getHeader(){
 </nav>'
 }
 
-function getFooter(companyName, address, phoneNumber){
+function getFooter(companyName, address, phoneNumber) {
     return '<footer class="footer py-4">\
     <div class="container">\
-        <div class="col-lg-4 text-lg-start>'+ companyName+ '<br>' + address + '<br>' + phoneNumber + '</div>\
+        <div class="col-lg-4 text-lg-start>'+ companyName + '<br>' + address + '<br>' + phoneNumber + '</div>\
         <div class="row align-items-center">\
             <div class="col-lg-4 my-3 my-lg-0">\
                 <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>\
