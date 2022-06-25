@@ -39,3 +39,12 @@ function getFooter(companyName, address, phoneNumber) {
     </div>\
 </footer>'
 }
+
+
+function makeMenu7(){
+
+}
+
+function makeMain5(){
+    
+}
