@@ -13,8 +13,8 @@ function getHeader() {
         <div class="collapse navbar-collapse" id="navbarResponsive">\
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">\
                 <li class="nav-item"><a class="nav-link" href="#top">Home</a></li>\
-                <li class="nav-item"><a class="nav-link" href="#product">Products</a></li>\
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>\
+                <li class="nav-item"><a class="nav-link" href="#product">Menu</a></li>\
+                <li class="nav-item"><a class="nav-link" href="#contact">Main</a></li>\
             </ul>\
         </div>\
     </div>\
@@ -41,10 +41,22 @@ function getFooter(companyName, address, phoneNumber) {
 }
 
 
-function makeMenu7(){
-
+function makeMenu7() {
+    let menuString = "My Menu: ";
+    for (let i = 0; i < 3; i++) {
+        menuString += "Button ";
+    }
+    menuString = menuString.trim()
+    return menuString;
 }
 
-function makeMain5(){
-    
+function makeMain5() {
+    let mainString = "";
+    mainString += "My Product:<br>";
+    mainString += "Product Name:<br>";
+    mainString += "Product ID:<br>";
+    mainString += "Product Description:<br>";
+    mainString += "Shopping Cart Link Bar:<br>";
+    mainString += "Product Image:<br>";
+    return mainString;
 }
