@@ -46,9 +46,9 @@ function getFooter(companyName, address, phoneNumber) {
 
 
 function makeMenu7() {
-    let menuString = "My Menu: ";
-    for (let i = 0; i < 3; i++) {
-        menuString += "Button ";
+    let menuString = "My Menu: <br><br>";
+    for (let i = 1; i < 4; i++) {
+        menuString += "<button>Product #" + i + "</button>";
     }
     menuString = menuString.trim()
     return menuString;
@@ -57,9 +57,9 @@ function makeMenu7() {
 function makeMain5(myproduct) {
     let mainString = "";
     mainString += "My Product:<br>";
-    mainString += "Product Name: "+product1.name+"<br>";
-    mainString += "Product ID: "+product1.id+"<br>";
-    mainString += "Product Description: "+product1.desc+"<br>";
+    mainString += "Product Name: " + product1.name + "<br>";
+    mainString += "Product ID: " + product1.id + "<br>";
+    mainString += "Product Description: " + product1.desc + "<br>";
     mainString += "Shopping Cart Link Bar: <br>";
     mainString += "Product Image: <br>";
     return mainString;
