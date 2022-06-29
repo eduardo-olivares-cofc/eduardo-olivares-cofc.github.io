@@ -46,21 +46,25 @@ function getFooter(companyName, address, phoneNumber) {
 
 
 function makeMenu7() {
-    let menuString = "My Menu: <br><br>";
+    let menuString = "My Menu:";
     for (let i = 1; i < 4; i++) {
-        menuString += "<button>Product #" + i + "</button>";
+        menuString += "<button onclick='execButton841(product" + i + ")'>Product #" + i + "</button>";
     }
     menuString = menuString.trim()
     return menuString;
 }
 
-function makeMain5(myproduct) {
+function makeMain5(productObj) {
     let mainString = "";
     mainString += "My Product:<br>";
-    mainString += "Product Name: " + product1.name + "<br>";
-    mainString += "Product ID: " + product1.id + "<br>";
-    mainString += "Product Description: " + product1.desc + "<br>";
+    mainString += "Product Name: " + productObj.name + "<br>";
+    mainString += "Product ID: " + productObj.id + "<br>";
+    mainString += "Product Description: " + productObj.desc + "<br>";
     mainString += "Shopping Cart Link Bar: <br>";
     mainString += "Product Image: <br>";
     return mainString;
+}
+
+function execButton841(productObj) {
+    document.getElementById("main926").innerHTML = makeMain5(productObj);
 }
