@@ -64,7 +64,7 @@ function makeMain5(myproduct) {
     mainString += "Product Description: " + myproduct.desc + "<br>";
     mainString += "Shopping Cart Link Bar: <br>";
     const produrl = imgurl204 + myproduct.id + '.gif';
-    mainString += "Product Image: " + produrl;
+    mainString += "Product Image: " + "<img src='" + produrl + "'>";
     return mainString;
 }
 
