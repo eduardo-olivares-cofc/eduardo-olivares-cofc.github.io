@@ -1,3 +1,14 @@
+var cardimgurl537 = 'http://college1.com/images/cards/gbCard';
+
+function dealCards870(){
+  document.getElementById("main926").innerHTML = '<img id="card0" src="' + cardimgurl537 +  '52.gif">\
+  <img id="card1" src="' + cardimgurl537 +  '52.gif">\
+  <img id="card2" src="' + cardimgurl537 +  '52.gif">\
+  <img id="card3" src="' + cardimgurl537 +  '52.gif">\
+  <img id="card4" src="' + cardimgurl537 +  '52.gif">\
+  ';
+}
+
 var imgurl204 = 'http://college1.com/images/';
 
 var product1 = { name: "Supreme T Shirt", id: "111", desc: "Very drippy" };
@@ -48,10 +59,11 @@ function getFooter(companyName, address, phoneNumber) {
 
 
 function makeMenu7() {
-    let menuString = "My Menu:";
+    let menuString = "My Menu:<br><br>";
     for (let i = 1; i < 4; i++) {
         menuString += "<button onclick='execButton841(product" + i + ")'>Product #" + i + "</button>";
     }
+    menuString += "<button onclick='dealCards870()'>Deal Cards</button>";
     menuString = menuString.trim()
     return menuString;
 }
