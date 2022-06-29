@@ -1,3 +1,5 @@
+var imgurl204 = 'http://college1.com/images/';
+
 var product1 = { name: "Supreme T Shirt", id: "111", desc: "Very drippy" };
 var product2 = { name: "Cuban Link Chain", id: "222", desc: "Ice for your neck" };
 var product3 = { name: "Nike Fanny Pack", id: "333", desc: "To store all your money" };
@@ -54,17 +56,17 @@ function makeMenu7() {
     return menuString;
 }
 
-function makeMain5(productObj) {
+function makeMain5(myproduct) {
     let mainString = "";
     mainString += "My Product:<br>";
-    mainString += "Product Name: " + productObj.name + "<br>";
-    mainString += "Product ID: " + productObj.id + "<br>";
-    mainString += "Product Description: " + productObj.desc + "<br>";
+    mainString += "Product Name: " + myproduct.name + "<br>";
+    mainString += "Product ID: " + myproduct.id + "<br>";
+    mainString += "Product Description: " + myproduct.desc + "<br>";
     mainString += "Shopping Cart Link Bar: <br>";
     mainString += "Product Image: <br>";
     return mainString;
 }
 
-function execButton841(productObj) {
-    document.getElementById("main926").innerHTML = makeMain5(productObj);
+function execButton841(myproduct) {
+    document.getElementById("main926").innerHTML = makeMain5(myproduct);
 }
