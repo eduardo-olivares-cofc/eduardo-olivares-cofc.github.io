@@ -54,13 +54,13 @@ function makeMenu7() {
     return menuString;
 }
 
-function makeMain5() {
+function makeMain5(myproduct) {
     let mainString = "";
     mainString += "My Product:<br>";
-    mainString += "Product Name:<br>";
-    mainString += "Product ID:<br>";
-    mainString += "Product Description:<br>";
-    mainString += "Shopping Cart Link Bar:<br>";
-    mainString += "Product Image:<br>";
+    mainString += "Product Name: "+product1.name+"<br>";
+    mainString += "Product ID: "+product1.id+"<br>";
+    mainString += "Product Description: "+product1.desc+"<br>";
+    mainString += "Shopping Cart Link Bar: <br>";
+    mainString += "Product Image: <br>";
     return mainString;
 }
