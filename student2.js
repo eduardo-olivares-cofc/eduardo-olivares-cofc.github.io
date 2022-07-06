@@ -1,12 +1,28 @@
+var cardnum326 = -1;
 var cardimgurl537 = 'http://college1.com/images/cards/gbCard';
 
-function dealCards870(){
-  document.getElementById("main926").innerHTML = '<img id="card0" src="' + cardimgurl537 +  '52.gif">\
-  <img id="card1" src="' + cardimgurl537 +  '52.gif">\
-  <img id="card2" src="' + cardimgurl537 +  '52.gif">\
-  <img id="card3" src="' + cardimgurl537 +  '52.gif">\
-  <img id="card4" src="' + cardimgurl537 +  '52.gif">\
+function hitCard771() {
+    let cardnumber0 = Math.floor(Math.random() * (51 - 0 + 1) + 0);
+    if (cardnum326 != -1) {
+        document.getElementById("card0").src = cardimgurl537 + cardnumber0 + '.gif';
+    } else {
+        alert('Cards not on screen');
+    }
+}
+
+function dealCards870() {
+    let cardnumber0 = Math.floor(Math.random() * (51 - 0 + 1) + 0);
+    let cardnumber1 = Math.floor(Math.random() * (51 - 0 + 1) + 0);
+    let cardnumber2 = 52;
+    let cardnumber3 = 52;
+    let cardnumber4 = 52;
+    document.getElementById("main926").innerHTML = '<img id="card0" src="' + cardimgurl537 + cardnumber0 + '.gif">\
+  <img id="card1" src="' + cardimgurl537 + cardnumber1 + '.gif">\
+  <img id="card2" src="' + cardimgurl537 + cardnumber2 + '.gif">\
+  <img id="card3" src="' + cardimgurl537 + cardnumber3 + '.gif">\
+  <img id="card4" src="' + cardimgurl537 + cardnumber4 + '.gif">\
   ';
+    cardnum326 = 2;
 }
 
 var imgurl204 = 'http://college1.com/images/';
@@ -64,6 +80,7 @@ function makeMenu7() {
         menuString += "<button onclick='execButton841(product" + i + ")'>Product #" + i + "</button>";
     }
     menuString += "<button onclick='dealCards870()'>Deal Cards</button>";
+    menuString += "<button onclick='hitCard771()'>Hit Card</button>";
     menuString = menuString.trim()
     return menuString;
 }
@@ -82,4 +99,5 @@ function makeMain5(myproduct) {
 
 function execButton841(myproduct) {
     document.getElementById("main926").innerHTML = makeMain5(myproduct);
+    cardnum326 = -1;
 }
