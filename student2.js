@@ -1,10 +1,10 @@
 var cardnum326 = -1;
 var cardimgurl537 = 'http://college1.com/images/cards/gbCard';
-var imgurl204 = 'http://college1.com/images/';
+var imgurl204 = "/assets/img/products/";
 
-var product1 = { name: "Supreme T Shirt", id: "111", desc: "Very drippy" };
-var product2 = { name: "Cuban Link Chain", id: "222", desc: "Ice for your neck" };
-var product3 = { name: "Nike Fanny Pack", id: "333", desc: "To store all your money" };
+var product1 = { name: "Supreme T Shirt", id: "3", desc: "Very drippy" };
+var product2 = { name: "Cuban Link Chain", id: "1", desc: "Ice for your neck" };
+var product3 = { name: "Nike Fanny Pack", id: "2", desc: "To store all your money" };
 
 var companyname5 = "Drip Clothes Inc.";
 var address3 = "450 Main St. Valencia, CA 91344";
@@ -90,13 +90,25 @@ function makeMain5(myproduct) {
     mainString += "Product Name: " + myproduct.name + "<br>";
     mainString += "Product ID: " + myproduct.id + "<br>";
     mainString += "Product Description: " + myproduct.desc + "<br>";
-    mainString += "Shopping Cart Link Bar: <br>";
-    const produrl = imgurl204 + myproduct.id + '.gif';
-    mainString += "Product Image: " + "<img src='" + produrl + "'>";
+    mainString += "Shopping Cart Link Bar:<br>" + makeLinkBar853() + "<br>";
+    const produrl = imgurl204 + "product" + myproduct.id + '.jpg';
+    mainString += "Product Image: <br>" + "<img class='img-fluid' src='" + produrl + "'>";
     return mainString;
 }
 
 function execButton841(myproduct) {
     document.getElementById("main926").innerHTML = makeMain5(myproduct);
     cardnum326 = -1;
+}
+
+function makeLinkBar853() {
+    return '<button type="button" class="btn btn-success">\
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus-fill"\
+        viewBox="0 0 16 16">\
+        <path\
+            d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z">\
+        </path>\
+    </svg>\
+    Add to cart\
+</button>'
 }
