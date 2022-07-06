@@ -1,5 +1,14 @@
 var cardnum326 = -1;
 var cardimgurl537 = 'http://college1.com/images/cards/gbCard';
+var imgurl204 = 'http://college1.com/images/';
+
+var product1 = { name: "Supreme T Shirt", id: "111", desc: "Very drippy" };
+var product2 = { name: "Cuban Link Chain", id: "222", desc: "Ice for your neck" };
+var product3 = { name: "Nike Fanny Pack", id: "333", desc: "To store all your money" };
+
+var companyname5 = "Drip Clothes Inc.";
+var address3 = "450 Main St. Valencia, CA 91344";
+var phonenumber5 = "(555) 515-1234";
 
 function hitCard771() {
     let cardnumber0 = Math.floor(Math.random() * (51 - 0 + 1) + 0);
@@ -24,16 +33,6 @@ function dealCards870() {
   ';
     cardnum326 = 2;
 }
-
-var imgurl204 = 'http://college1.com/images/';
-
-var product1 = { name: "Supreme T Shirt", id: "111", desc: "Very drippy" };
-var product2 = { name: "Cuban Link Chain", id: "222", desc: "Ice for your neck" };
-var product3 = { name: "Nike Fanny Pack", id: "333", desc: "To store all your money" };
-
-var companyname5 = "Drip Clothes Inc.";
-var address3 = "450 Main St. Valencia, CA 91344";
-var phonenumber5 = "(555) 515-1234";
 
 function getHeader() {
     return '<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">\
