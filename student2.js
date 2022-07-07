@@ -85,6 +85,7 @@ function makeMenu7() {
     menuString += "<button onclick='hitCard771()'>Hit Card</button>";
     menuString += "<button onclick='popupAd788()'>Pop Up Ad</button>";
     menuString += "<button onclick='closeAd788()'>Close Ad</button>";
+    menuString += "<button onclick='makeForm287()'>Enter Data</button>";
     menuString = menuString.trim()
     return menuString;
 }
@@ -141,4 +142,38 @@ function popupAd788() {
 
 function closeAd788() {
     winobj405.close();
+}
+
+function makeForm287() {
+    document.getElementById("main926").innerHTML = '<form onSubmit="return checkForm790()" name="customerform">\
+    <table width="100%" border="1">\
+        <tr>\
+            <td>First Name: <input type="text" name="firstname"></td>\
+            <td align="right"> Last Name: <input type="text" name="lastname"></td>\
+        </tr>\
+        <tr>\
+            <td colspan="2">Address: <input type="text" name="address" size="50"></td>\
+        </tr>\
+        <tr>\
+            <td>City: <input type="text" name="city"></td>\
+            <td align="right">State: <input type="text" name="state" size="3">\
+                Zip: <input type="text" name="zip" size="6"></td>\
+        <tr>\
+            <td colspan="2">Email Address: <input type="text" name="emailaddr" size="50">\
+            </td>\
+        </tr>\
+        <tr>\
+            <td><input type="submit" value="Submit"></td>\
+            <td align="right"><input type="reset"></td>\
+        </tr>\
+    </table>\
+</form>';
+}
+
+function checkForm790() {
+    let form = document.customerform;
+    if (form.firstname.value == "" || form.lastname.value == "" || form.address.value == "" || form.city.value == "" || form.state.value == "" || form.zip.value == "" || form.emailaddr.value == "") {
+        alert("Form is empty or some fields are missing");
+        return false;
+    }
 }
