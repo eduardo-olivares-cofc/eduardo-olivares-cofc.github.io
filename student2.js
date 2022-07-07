@@ -2,6 +2,9 @@ var cardnum326 = -1;
 var cardimgurl537 = 'http://college1.com/images/cards/gbCard';
 var imgurl204 = "/assets/img/products/";
 
+var adnum474 = 1;
+var winobj405 = -1;
+
 var product1 = { name: "Supreme T Shirt", id: "3", desc: "Very drippy" };
 var product2 = { name: "Cuban Link Chain", id: "1", desc: "Ice for your neck" };
 var product3 = { name: "Nike Fanny Pack", id: "2", desc: "To store all your money" };
@@ -80,6 +83,8 @@ function makeMenu7() {
     }
     menuString += "<button onclick='dealCards870()'>Deal Cards</button>";
     menuString += "<button onclick='hitCard771()'>Hit Card</button>";
+    menuString += "<button onclick='popupAd788()'>Pop Up Ad</button>";
+    menuString += "<button onclick='closeAd788()'>Close Ad</button>";
     menuString = menuString.trim()
     return menuString;
 }
@@ -111,4 +116,29 @@ function makeLinkBar853() {
     </svg>\
     Add to cart\
 </button>'
+}
+
+function popupAd788() {
+    adnum474 = Math.floor(Math.random() * (3 - 0 + 1) + 0);
+    winobj405 = window.open("", "_blank", "width=200, height=100");
+
+    if (adnum474 == 1) {
+        winobj405.document.write('<div style="background-color: green;">\
+        <h1>Im not asking anymore....Buy something! Or else....</h1>\
+        </div>');
+    } else if (adnum474 == 2) {
+        winobj405.document.write('<div style="background-color: yellow;">\
+        <h1>Please buy something?</h1>\
+        </div>');
+    } else if (adnum474 == 3) {
+        winobj405.document.write('<div style="background-color: red;">\
+        <h1>This is a great deal! Buy it NOW!!!</h1>\
+        </div>');
+    }
+    winobj405.document.close();
+    winobj405.focus();
+}
+
+function closeAd788() {
+    winobj405.close();
 }
