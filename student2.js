@@ -119,7 +119,7 @@ function makeLinkBar853() {
 }
 
 function popupAd788() {
-    adnum474 = Math.floor(Math.random() * (3 - 0 + 1) + 0);
+    adnum474 = Math.floor(Math.random() * (3 - 1 + 1) + 1);
     winobj405 = window.open("", "_blank", "width=200, height=100");
 
     if (adnum474 == 1) {
