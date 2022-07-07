@@ -8,6 +8,10 @@ var winobj405 = -1;
 var product1 = { name: "Supreme T Shirt", id: "3", desc: "Very drippy" };
 var product2 = { name: "Cuban Link Chain", id: "1", desc: "Ice for your neck" };
 var product3 = { name: "Nike Fanny Pack", id: "2", desc: "To store all your money" };
+var product4 = {};
+var product5 = {};
+var jsonobj5 = { "type": "clothes", "number": "1" };
+var jsonobj4 = { "type": "clothes", "number": "2" };
 
 var companyname5 = "Drip Clothes Inc.";
 var address3 = "450 Main St. Valencia, CA 91344";
@@ -81,6 +85,8 @@ function makeMenu7() {
     for (let i = 1; i < 4; i++) {
         menuString += "<button onclick='execButton841(product" + i + ")'>Product #" + i + "</button>";
     }
+    menuString += "<button onclick='getElementById(\"main926\").innerHTML=makeMain5(product4);'>Product #4</button>";
+    menuString += "<button onclick='getElementById(\"main926\").innerHTML=makeMain5(product5);'>Product #5</button>";
     menuString += "<button onclick='dealCards870()'>Deal Cards</button>";
     menuString += "<button onclick='hitCard771()'>Hit Card</button>";
     menuString += "<button onclick='popupAd788()'>Pop Up Ad</button>";
@@ -176,4 +182,27 @@ function checkForm790() {
         alert("Form is empty or some fields are missing");
         return false;
     }
+}
+
+
+function getProduct991(jsonobj) {
+    var server = 'http://college1.com/getproduct.php';
+    var jsonstr = JSON.stringify(jsonobj);           // This is a string in JSON format
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", server + "?jsonstr=" + jsonstr, true); // open connection to server
+    xmlhttp.send();  // send request, causes onreadystatechange to run when reply is ready 
+
+    xmlhttp.onreadystatechange = function () {
+        //console.log('hello ' + this.readyState + ' ' + this.status);
+        if (this.readyState == 4 && this.status == 200) {
+            replystr = this.responseText;           // replystr MUST BE GLOBAL
+            //console.log(replystr);
+            if (product4 == null)
+                product4 = JSON.parse(replystr);
+            else if (product5 == null)
+                product5 = JSON.parse(replystr);
+            else
+                console.log('Error, no object variable available');
+        }
+    };
 }
